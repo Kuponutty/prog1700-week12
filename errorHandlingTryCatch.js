@@ -5,11 +5,11 @@ Description: Week 12 in class demo of error handling
 */
 
 const rs = require(`readline-sync`);
-
+const fs = require(`fs`);
 
 function main(){
 
-    const fs = require(`fs`);
+
     const filename = "input.txt";
     const fileRead = false;
     while(fileRead == false){
@@ -17,6 +17,7 @@ function main(){
     try{
         var data = fs.readFileSync(`./input.txt`,
         {encoding: `utf-8`, flag:`r`})
+        fileread = true;
     }
     catch (e){
         console.log(`File not found!`);
